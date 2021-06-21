@@ -466,72 +466,80 @@ let oAudit = {
 
   comunicacionsUnificades : {
     salaReunions: {
-      existeix: false,
-      observacions: null,
-      capacitat: null,
-      mides: null,
+      existeix: true,
+      numero: 2,
+      capacitat: "capacitat sala reunions",
+      mides: "mides sala reunions",
       dispositius: {
-        SX10: false,		// true / false
-        SX80: false,		// true / false
-        roomkit: false,	// true / false
-        DX80: false,	// true / false
-        camaraWeb: false,  // true / false
-        tablet: false, 	// true / false
-        mando: false,		// true / false
-        altaveu: false, 	// true / false
-        TV: false,		// true / false
-        projector: false, // true / false
-        PC: false, // true / false
-        displayPortHDMI: false, 	// true / false
-        conversorVGA_HDMI: false,	// true / false
-        cableAudio: false,	// true / false
-        duplicadorHDMI: false,	// true / false
+        SX10: true,		// true / false
+        SX80: true,		// true / false
+        roomkit: true,	// true / false
+        DX80: true,	// true / false
+        camaraWeb: true,  // true / false
+        tablet: true, 	// true / false
+        mando: true,		// true / false
+        altaveu: true, 	// true / false
+        TV: true,		// true / false
+        projector: true, // true / false
+        PC: true, // true / false
+        displayPortHDMI: true, 	// true / false
+        conversorVGA_HDMI: true,	// true / false
+        cableAudio: true,	// true / false
+        duplicadorHDMI: true,	// true / false
       },
-      recomanacions: null,
+      recomanacions: {
+				renovarPorjector: true,
+				dotacioWebCam: true,
+				DotacioJabra: true,
+				altres: "altres recomanacions"
+			},
     },
     videoconferencia : {
       // existeix: null, 	// true / false
       // observacionsExistencia: null,
-      operativa: null,	// true / false
-      observacionsOperativa: null,
+      operativa: true,	// true / false
+      observacionsOperativa: "observacions videoconferencia operativa",
       // estat: null,		// valor 1 - 5
       prova: {
-        feta: false,
-        observacions: null,
-        trucada: false,	// true / false
-        compartirPc: false, // true / false
-        audio: false,	// true / false
-        video: false, 	// true / false
-        resultat: null,	// valor 1 - 5
+        feta: true,
+        observacions: "observacions prova",
+        trucada: true,	// true / false
+        compartirPc: true, // true / false
+        audio: true,	// true / false
+        video: true, 	// true / false
+        resultat: "aceptable",	// valor 1 - 5
       },
-      observacions: null
+      // observacions: null
     },
 
     telefonSupervivencia : {
-      existeix: null,		// true / false
-      observacionsExistencia: null,
-      DDI: null,
-      instruccions: null,
-      estat: null,		// valor 1 - 5
-      ubicacio: null,
+      existeix: true,		// true / false
+      observacionsExistencia: "observacions existencia telefon",
+      DDI: "xxx.xxx.xxx",
+      instruccions: false,
+      estat: "deficiente",		// valor 1 - 5
+      ubicacio: "ubicacio telefon supervivencia",
+			resultatProva: "correcto",
       prova : {
-        trucadaSortint: false,	// true / false
-        trucadaEntrant: false, 	// true / false
-        desconectarTensio: false,
-        nivellAudioRing: false
+        trucadaSortint: true,	// true / false
+        trucadaEntrant: true, 	// true / false
+        desconectarTensio: true,
+        nivellAudioRing: true
       },
-      nivellCobertura: null,
-      nivellBateria: null,
-      connectatCorrent: null,
-      instruccionsProperes: null,
-      observacions: null,
+      nivellCobertura: 2,
+      nivellBateria: "3",
+      connectatCorrent: true,
+      instruccionsProperes: false,
+      observacions: "observacions telefon supervivencia",
     },
 
     auricularsRecanvi: {
-      existeix: null,		// true / false
-      observacions: null,
-      quantitat: null,	// numero
-    }
+      existeix: true,		// true / false
+      observacions: "observacions auriculars recanvi",
+      quantitat: 3,	// numero
+    },
+
+		observacions: "observacions comunicacions unificades"
 
   },
 
@@ -542,66 +550,66 @@ let oAudit = {
 
     taulesNetes : {
       documentacioSobreTaules: {
-        existeix: null,		// true / false
-        observacions: null
+        existeix: true,		// true / false
+        observacions: "observacons documentacio sobre taules"
       },
       documentacioImpresores : {
-        existeix: null,		// true / false
-        observacions: null
+        existeix: false,		// true / false
+        observacions: "observacions documentacio impresores"
       },
       documentacioPapeleres : {
-        existeix: null,		// true / false
-        observacions: null
+        existeix: true,		// true / false
+        observacions: "observacions documentacio papereres"
       }
     },
 
     destruccioDocuments: {
       destructoraPapers: {
-        existeix: null,			// true / false
-        observacionsPapers: null,
-        complementCDs: null,	// true / false
-        observacionsCDs: null,
-        quantitat: null,		// numero
+        existeix: false,			// true / false
+        observacionsPapers: "observacio destructora papers",
+        complementCDs: true,	// true / false
+        observacionsCDs: "observaciosns complement CDs",
+        quantitat: 3,		// numero
       },
       contenidorSegur: {
-        existeix: null,			// true / false
-        observacions: null,
-        quantitat: null,		// numero
+        existeix: false,			// true / false
+        observacions: "observacions contenidors segurs",
+        quantitat: 2,		// numero
       }
     },
 
     OrientacioPantalles: {
-      exterior: null, 		// true / false
-      observacionsExterior: null,
-      zonaPas: null, 			// true / false
-      observacionsZonaPas: null
+      exterior: true, 		// true / false
+      observacionsExterior: "observacions orientacio exterior pantalles",
+      zonaPas: false, 			// true / false
+      observacionsZonaPas: "observacions zona pas"
     },
 
     carteleriaLOPD: {
-      PROAS: null, 		// true / false
-      observacionsPROAS: null,
-      CEX: null, 			// true / false
-      observacionsCEX: null
+      PROAS: true, 		// true / false
+      observacionsPROAS: "observacions cartelleria LOPD dels PROAS",
+      CEX: false, 			// true / false
+      observacionsCEX: "observacions cartelleria LOPD CCEE"
     },
 
     materialBaixaInventari: {
-      existeix: null, 	// true / false
-      observacions: null
+      existeix: true, 	// true / false
+      observacions: "observacions material baixa"
     },
 
     suportsFisics: {
-      existeix: null, 	// true / false
-      observacions: null
+      existeix: true, 	// true / false
+      observacions: "observacions suports fisics"
     },
 
     documentacioSensible: {
-      existeix: null, 	// true / false
-      observacions: null
+      existeix: false, 	// true / false
+      observacions: "observacions documentacio sensible"
     },
 
     expedientsGreus: {
-      existeix: null, 	// true / false
-      observacions: null
+      existeix: true, 	// true / false
+      observacions: "observacions expedients greus"
     },
 
 
@@ -609,35 +617,35 @@ let oAudit = {
     accesAlCentre : {
       personalIntern: {
         usuarisAmbClaus: {
-          existeix: null,		// true / false
-          observacions: null 	// numero
+          existeix: true,		// true / false
+          observacions: "observacions acces personal intern" 	// numero
         },
         codisAlarma: {
-          tipus: null,		// individuals / generic
-          observacions: null 	// numero
+          tipus: "individuales",		// individuals / generic
+          observacions: "observacions codis alarma personal intern" 	// numero
         },
       },
       personalExtern: {
 
         llibreRegistre: {
-          existeix: null,		// true / false
-          observacions: null 	// numero
+          existeix: false,		// true / false
+          observacions: "observacions llibre registre personal extern" 	// numero
         },
         usuarisAmbClaus: {
-          existeix: null,		// true / false
-          observacions: null 	// numero
+          existeix: true,		// true / false
+          observacions: "observacions usuaris externs amb claus personal extern" 	// numero
         },
         codisAlarma: {
-          tipus: null,		// individuals / generic
-          observacions: null 	// numero
+          tipus: "genericos",		// individuals / generic
+          observacions: "observacions codis alarma personal extern" 	// numero
         },
       },
       accesForaHorariHabitual: {
-        existeix: null,		// true / false
-        observacions: null 	// numero
+        existeix: true,		// true / false
+        observacions: "observacions acces fora horari habitual" 	// numero
       },
 
-      observacions: null,
+      observacions: "observacions acces al centre",
     },
 
 
