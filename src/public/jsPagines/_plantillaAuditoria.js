@@ -627,16 +627,16 @@ let oAudit = {
       },
       personalExtern: {
 
-        llibreRegistre: {
-          existeix: false,		// true / false
-          observacions: "observacions llibre registre personal extern" 	// numero
-        },
+        // llibreRegistre: {
+        //   existeix: false,		// true / false
+        //   observacions: "observacions llibre registre personal extern" 	// numero
+        // },
         usuarisAmbClaus: {
           existeix: true,		// true / false
           observacions: "observacions usuaris externs amb claus personal extern" 	// numero
         },
         codisAlarma: {
-          tipus: "genericos",		// individuals / generic
+          tipus: "generico",		// individuals / generic
           observacions: "observacions codis alarma personal extern" 	// numero
         },
       },
@@ -656,40 +656,40 @@ let oAudit = {
 
 
     alarmaIntrusio: {
-      existeix: null,		// true / false
-      observacions: null 	// numero
+      existeix: true,		// true / false
+      observacions: "observacions alarma intrussió" 	// numero
     },
     alarmaIncendis: {
-      existeix: null,		// true / false
-      observacions: null 	// numero
+      existeix: false,		// true / false
+      observacions: "observacions alarma incendis" 	// numero
     },
 
     videovigilancia : {
-      existeix: null,		// true / false
-      observacions: null,
+      existeix: false,		// true / false
+      observacions: "observacions videovigilancia",
       gestioInterna: {
-        existeix: null,
-        observacions: null,
+        existeix: true,
+        observacions: "observacions video gestio interna",
         gravacioImatges: {
-          personalAmbAcces: null,
-          periodeConservacio: null
+          personalAmbAcces: "personal amb accés",
+          periodeConservacio: "Temps de retenció"
         },
       },
       gestioExterna: {
-        existeix: null,
-        observacionsExistencia: null,
-        periodeConservacio: null,
-        evidencia: null,
-        observacionsEvidencia: null
+        existeix: false,
+        observacionsExistencia: "observacions video gestio externa",
+        periodeConservacio: "temps retencio gestio externa",
+        evidencia: true,
+        observacionsEvidencia: "observacions evidencia"
       },
 
       retol: {
-        existeix: null,		// true / false
-        observacions: null 	// numero
+        existeix: false,		// true / false
+        observacions: "observacions retol" 	// numero
       },
       carteleriaActualitzada: {
-        existeix: null,		// true / false
-        observacions: null 	// numero
+        existeix: true,		// true / false
+        observacions: "observacions carteleria actualitzada" 	// numero
       },
     },
 
@@ -700,32 +700,32 @@ let oAudit = {
     // continuidad de negocio
 
     centresAlternatiusGADA: {
-      existeix: null,		// true / false
-      observacions: null 	// numero
+      existeix: false,		// true / false
+      observacions: "observacions gada" 	// numero
     },
 
     telefonSupervivencia: {
-      existeix: null,		// true / false
-      observacions: null 	// numero
+      existeix: true,		// true / false
+      observacions: "observacions telefon supervivencia" 	// numero
     },
 
     procedimentsPaper: {
-      existeix: null,		// true / false
-      observacions: null 	// numero
+      existeix: false,		// true / false
+      observacions: "observacions procedients paper" 	// numero
     },
 
     pendriveEmergencia: {
       ubicacioCorrecte : {
-        existeix: null,		// Esta en un sobre enganxat al rack ?
-        observacions: null
+        existeix: true,		// Esta en un sobre enganxat al rack ?
+        observacions: "observacions pendrive emergencia"
       },
       ultimaVersio : {
-        existeix: null,		// true / false
-        observacions: null
+        existeix: false,		// true / false
+        observacions: "observavions ultima versio"
       },
       actualitzacio : {
-        feta: null, 	// true / false
-        observacions: null
+        feta: true, 	// true / false
+        observacions: "observacions actualització"
       },
     },
 
@@ -733,112 +733,112 @@ let oAudit = {
     // seguretat de les comunicacions
 
     accesSegurSalaComunicacions: {
-      existeix: null,		// true / false
-      observacions: null 	// numero
+      existeix: false,		// true / false
+      observacions: "observacions acces segur sala comunicacions" 	// numero
     },
 
     accesSegurRack: {
-      existeix: null,		// true / false
-      observacions: null 	// numero
+      existeix: true,		// true / false
+      observacions: "observacions acces segur Rack" 	// numero
     },
 
     SAIRack: {
-      existeix: null,		// true / false
-      observacions: null 	// numero
+      existeix: false,		// true / false
+      observacions: "observacions SAI rack" 	// numero
     },
 
     puntsXarxaSalaEspera: {
-      existeix: null,		// true / false
-      observacions: null 	// numero
+      existeix: true,		// true / false
+      observacions: "observaciosn punts xarxa sala espera" 	// numero
     },
 
-    observacions: null
+    observacions: "Observacions seguretat de la informació"
 
   },
 
   formacio: {
     auriculars: {
-      formacioFeta: null,
-      observacions: null
+      formacioFeta: false,
+      observacions: "observacions formacio auriculars"
     },
 
     videoconferencia: {
-      formacioFeta: null,
-      instruccionsEntregades: null,
-      observacions: null
+      formacioFeta: true,
+      instruccionsEntregades: false,
+      observacions: "observacionss formacio videoconferencia"
     },
 
     llicenciesM3: {
-      formacioFeta: null,
-      observacions: null
+      formacioFeta: true,
+      observacions: "observacions llicències M3"
     },
 
     telefonSupervivencia: {
-      formacioFeta: null,
-      observacions: null
+      formacioFeta: false,
+      observacions: "observacions formacio telefon supervivencia"
     },
 
-    observacions: null
+    observacions: "observacions formació"
   },
 
   valoracions: {
     usuari: {
-      queixes: null,
-      suggeriments: null,
-      millores: null
+      queixes: "valoracions usuari queixes",
+      suggeriments: "valoracions usuari suggeriments",
+      millores: "valoracions usuari millores"
     },
 
     tecnic: {
-      valoracions: null
+      valoracions: "valoracionss tecnic"
     }
   },
 
   accionsMillora: {
     observacions:{
       rack:{
-        neteja: false,
-        sanejar: false,
-        retirarPatchP: false,
-        retirarRack: false
+        neteja: true,
+        sanejar: true,
+        retirarPatchP: true,
+        retirarRack: true
       },
-      wanSanejar: false,
+      wanSanejar: true,
       sala: {
-        neteja: false,
-        retirarObjectes: false
+        neteja: true,
+        retirarObjectes: true
       },
       SAI: {
-        revisoDispNoConnectats: false,
+        revisoDispNoConnectats: true,
       },
-      enviarPendriveBIOS: false,
-      enviarLatiguillos: false,
+      enviarPendriveBIOS: true,
+      enviarLatiguillos: true,
       llocsTreball: {
-        ampliacioPuntsXarxa: false,
-        revisarPresesXarxa: false,
-        revisarCaixaConexions: false,
+        ampliacioPuntsXarxa: true,
+        revisarPresesXarxa: true,
+        revisarCaixaConexions: true,
       },
-      revisarTelemedicina: false,
-      revisarVideoconferencia: false,
-      enviarWebcam: false,
+      revisarTelemedicina: true,
+      revisarVideoconferencia: true,
+      enviarWebcam: true,
       CU: {
-        enviarAuricularsReserva: false,
-        enviarAltaveu: false,
+        enviarAuricularsReserva: true,
+        enviarAltaveu: true,
       },
-      enviarLectorCDDVD: false,
-      renoveProjector: false,
-      altres: null
+      enviarLectorCDDVD: true,
+      renoveProjector: true,
+      altres: "altres OBSERVACIONS"
     },
 
     NC: {
-      enviarPendriveEmergencia: false,
-      solicitarDestructoraPaper: false,
-      solicitarContenidor: false,
-      visibilitatPantalles: false,
-      salaRackSenseClau: false,
-      rackSenseClaus: false,
-      carteleriaLOPD: false,
-      suportsBackup: false,
-      docsSensibles: false,
-      altres: null
+      enviarPendriveEmergencia: true,
+      solicitarDestructoraPaper: true,
+      solicitarContenidor: true,
+      visibilitatPantalles: true,
+      salaRackSenseClau: true,
+      rackSenseClaus: true,
+      carteleriaLOPD: true,
+      suportsBackup: true,
+      docsSensibles: true,
+      altres: "ALTRES NO CONFORMITATS"
     }
   }
 

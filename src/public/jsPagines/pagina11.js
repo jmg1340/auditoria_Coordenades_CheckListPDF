@@ -119,5 +119,45 @@ function pintaPagina11 (ctx){
 	ctx.doc.text(objEG.observacions, 360.0, 538.0 - 8);	
 
 
+	let objAPI = oAudit.seguretatInformacio.accesAlCentre.personalIntern
+
+	new Cercle(ctx.doc,234.0, 585.0, objAPI.usuarisAmbClaus.existeix).pinta()
+	new Cercle(ctx.doc, 263.0, 585.0, !objAPI.usuarisAmbClaus.existeix && objAPI.usuarisAmbClaus.existeix != null).pinta()
+	new Quadrat(ctx.doc, 293.0, 585.0, !!objAPI.usuarisAmbClaus.observacions).pinta() // !! converteix un string a boolean; "" es false;
+	ctx.doc.text(objAPI.usuarisAmbClaus.observacions, 360.0, 589.0 - 8);	
+
+	new Cercle(ctx.doc,234.0, 601.0, objAPI.codisAlarma.tipus == "individuales").pinta()
+	new Cercle(ctx.doc, 303.0, 601.0, objAPI.codisAlarma.tipus == "generico").pinta()
+	new Quadrat(ctx.doc, 381.0, 602.0, !!objAPI.codisAlarma.observacions).pinta() // !! converteix un string a boolean; "" es false;
+	ctx.doc.text(objAPI.codisAlarma.observacions, 450.0, 606.0 - 8);	
+
+
+	let objAPE = oAudit.seguretatInformacio.accesAlCentre.personalExtern
+
+	new Cercle(ctx.doc,234.0, 636.0, objAPE.usuarisAmbClaus.existeix).pinta()
+	new Cercle(ctx.doc, 263.0, 636.0, !objAPE.usuarisAmbClaus.existeix && objAPE.usuarisAmbClaus.existeix != null).pinta()
+	new Quadrat(ctx.doc, 293.0, 636.0, !!objAPE.usuarisAmbClaus.observacions).pinta() // !! converteix un string a boolean; "" es false;
+	ctx.doc.text(objAPE.usuarisAmbClaus.observacions, 360.0, 640.0 - 8);	
+
+	new Cercle(ctx.doc,234.0, 652.0, objAPE.codisAlarma.tipus == "individuales").pinta()
+	new Cercle(ctx.doc, 304.0, 652.0, objAPE.codisAlarma.tipus == "generico").pinta()
+	new Quadrat(ctx.doc, 381.0, 652.0, !!objAPE.codisAlarma.observacions).pinta() // !! converteix un string a boolean; "" es false;
+	ctx.doc.text(objAPE.codisAlarma.observacions, 450.0, 658.0- 8);	
+
+
+
+
+	let objAFH = oAudit.seguretatInformacio.accesAlCentre.accesForaHorariHabitual
+
+	new Cercle(ctx.doc,234.0, 670.0, objAFH.existeix).pinta()
+	new Cercle(ctx.doc, 263.0, 670.0, !objAFH.existeix && objAFH.existeix != null).pinta()
+	new Quadrat(ctx.doc, 293.0, 670.0, !!objAFH.observacions).pinta() // !! converteix un string a boolean; "" es false;
+	ctx.doc.text(objAFH.observacions, 360.0, 674.0 - 8);	
+
+
+
+
+
+	ctx.doc.text(oAudit.seguretatInformacio.accesAlCentre.observacions, 82.0, 712.0 - 8);
 
 }
