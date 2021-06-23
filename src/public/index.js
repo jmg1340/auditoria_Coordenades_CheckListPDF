@@ -50,7 +50,8 @@ document.addEventListener("DOMContentLoaded", function(){
         bottom: 0,
         left: 0,
         right: 0
-      } 
+      },
+			layout: /^Pagina_(17|18|19|20|21).jpg/.test(imatge) ? "landscape" : "portrait"
     });
     
 
@@ -59,7 +60,13 @@ document.addEventListener("DOMContentLoaded", function(){
     background.src = `./imatgesChecklist/${imatge}`;
     // Make sure the image is loaded first otherwise nothing will draw.
     background.onload = function(){
-      ctx.drawImage(background, 0, 0, 595.28, 841.89);
+      if (/^Pagina_(17|18|19|20|21).jpg/.test(imatge)){
+				ctx.drawImage(background, 0, 0, 841.89, 595.28);
+			}else{
+				ctx.drawImage(background, 0, 0, 595.28, 841.89);
+			}
+
+
       
       ctx.fillStyle='red';
 			ctx.doc.fontSize(8)
@@ -80,6 +87,15 @@ document.addEventListener("DOMContentLoaded", function(){
 				case "Pagina_10.jpg": pintaPagina10(ctx); break;
 				case "Pagina_11.jpg": pintaPagina11(ctx); break;
 				case "Pagina_12.jpg": pintaPagina12(ctx); break;
+				case "Pagina_13.jpg": pintaPagina13(ctx); break;
+				case "Pagina_14.jpg": pintaPagina14(ctx); break;
+				case "Pagina_15.jpg": pintaPagina15(ctx); break;
+				case "Pagina_16.jpg": pintaCapsalera(ctx); break;
+				case "Pagina_17.jpg": pintaCapsalera(ctx); break;
+				case "Pagina_18.jpg": pintaCapsalera(ctx); break;
+				case "Pagina_19.jpg": pintaCapsalera(ctx); break;
+				case "Pagina_20.jpg": pintaCapsalera(ctx); break;
+				case "Pagina_21.jpg": pintaCapsalera(ctx); break;
 			}
 			
 

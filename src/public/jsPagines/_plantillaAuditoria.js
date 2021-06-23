@@ -820,7 +820,8 @@ let oAudit = {
       revisarVideoconferencia: true,
       enviarWebcam: true,
       CU: {
-        enviarAuricularsReserva: true,
+        enviarAuricularsEvolve65: true,
+        enviarAuricularsJabra930: true,
         enviarAltaveu: true,
       },
       enviarLectorCDDVD: true,
